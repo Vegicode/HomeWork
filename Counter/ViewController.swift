@@ -1,19 +1,31 @@
-//
-//  ViewController.swift
-//  Counter
-//
-//  Created by Mac on 26.04.2024.
-//
+
 
 import UIKit
 
 class ViewController: UIViewController {
 
+    
+    private var num: Int = 0
+    
+    @IBOutlet private weak var Counter: UILabel!
+    @IBOutlet private weak var Button: UIButton!
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        Counter.text = String(num)
+        
     }
+    
 
-
+    @IBAction private func ButtonDidTap(_ sender: Any) {
+        num += 1
+        Counter.text = String(num)
+    }
+    
+    
+    
+    
 }
 
